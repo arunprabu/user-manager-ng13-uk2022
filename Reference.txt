@@ -1,0 +1,61 @@
+
+Angular
+---
+  Expectation:
+    Hands-on 
+    ---
+      Explain => Coding => Demo => TRY OUT => [TODO] 
+
+    CRU[D] App 
+    ---
+  
+  Skillset 
+  --
+    * TypeScript 
+
+  Softwares
+  ---
+    NodeJS V 16.15.x+
+    
+SPA Frameworks/Libraries
+---
+  #1 React JS - Library 
+  #2 VueJS - Framework
+  #3 Angular 2+ - Framework
+  #4 Svelte - Framework 
+
+
+===
+Angular Versions History
+--
+  Sep 2016 - Angular 2  - CLI Version 1.1.x 
+      2017 - Angular 4  - CLI Version 1.4.x 
+      2017 - Angular 5  - CLI Version 1.7.x 
+      (started following semver)
+      2018 - Angular 6  - CLI version 6.x.x 
+      2018 - Angular 7  - CLI version 7.x.x  
+      2019 - Angular 8  - CLI version 8.x.x 
+      2020 - Angular 9  - CLI version 9.x.x 
+      2020 - Angular 10 - CLI version 10.x.x 
+      2020 - Angular 11 - CLI version 11.x.x 
+      2021 - Angular 12 - CLI version 12.x.x 
+      2021 - Angular 13 - CLI version 13.x.x  [LEARN] 
+      2022 - Angular 14 - CLI version 14.x.x 
+
+---
+
+Dev Machine Setup 
+---
+  Angular CLI 
+  npm i @angular/cli@13.3.8 -g
+    
+---
+  To create a project 
+    ng new user-manager-ng13-uk2022
+  
+  
+
+
+
+
+

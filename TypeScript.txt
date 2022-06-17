@@ -1,0 +1,62 @@
+TypeScript 
+--
+  * Microsoft 
+  * Open sourced 
+
+  TS = JS + DataTyping 
+
+  Primitive DataTypes: 
+  ---
+    string, number, boolean, undefined, null, symbol (es2015), big int(es2017)
+
+  Non-Primitive/Reference Types 
+  --
+    Object, Array, RegExp 
+
+  Types of Language based on DataTyping
+  --
+    1. Strongly-typed/Strictly-Typed Languages
+        Examples: Java, C#
+        Syntax: 
+          String myName = "John"; 
+          myName = "Steve"; // valid 
+          myName = true; // error 
+          myName = 100; // error 
+
+    2. Loosely-Typed Languages 
+        Examples: JS, PHP, Python 
+        Syntax:
+        --
+          var myName = "John";
+          myName = "Steve"; // valid 
+          myName = true; // valid 
+          myName = 100; // valid 
+          myName = undefined; // valid 
+          myName = null; // valid 
+          myName = []; // valid 
+          myName = {}; // valid 
+          myName = function(){}; // valid 
+        
+    TypeScript 
+    --
+      Syntax: 
+      ---
+        1. Implicit Datatyping 
+          var myName = 'John'; // valid 
+          myName = 'Steve'; // valid 
+          myName = true; // error 
+
+        2. Explicit Datatyping 
+          var myName: string = 'John';
+          myName = 'Steve'; // error 
+          myName = true; // error 
+
+
+      var x: number = 10;
+      var isLoggedIn: boolean = false;
+      var u: undefined;
+      var n: null;
+      var colorList: Array<string> =  ['red', 'green', 'blue'];
+      var colorList: string[] =  ['red', 'green', 'blue'];
+
+
