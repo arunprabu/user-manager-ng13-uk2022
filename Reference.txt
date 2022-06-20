@@ -54,6 +54,49 @@ Dev Machine Setup
     ng new user-manager-ng13-uk2022
   
   
+File Walkthru 
+Ng App Arch 
+How ng apps are running / getting bootstrapped? 
+
+
+Think in Angular
+--
+  1. Identifying Component 
+  2. Identifying component hierarchy 
+
+Building Blocks 
+--
+  Components 
+  Directives
+  Services
+  Interfaces/Models/Classes 
+  Guards
+  Pipes
+  Modules
+  Interceptor 
+
+---
+Concepts
+--
+  * 
+  *
+  *
+  *
+  * 
+
+---
+
+Project Structure
+---
+  src/
+    app/
+      header/
+      ...
+      ...
+      ...
+      ...
+      ...
+      ...
 
 
 
