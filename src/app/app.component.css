@@ -1,0 +1,6 @@
+/* comp-specific styles - not applicable to the descendents*/
+/* override bootstrap or other global styles here */
+
+.blueText{
+  color: blue;
+}

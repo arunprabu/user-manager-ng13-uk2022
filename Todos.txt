@@ -1,0 +1,7 @@
+TODO: integrate bootstrap in angular with angular.json 
+
+TODO: Conditional content projection / conditional transclusion / multi-slot content projection 
+
+      Display 'login' and 'signup' at last in header menu 
+      Display 'Back to top' at first in footer menu 
+

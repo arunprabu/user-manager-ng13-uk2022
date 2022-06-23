@@ -1,0 +1,6 @@
+/* comp-specific css */
+/* override global, bootstrap styles here */
+
+.appName{
+  color: yellow
+}

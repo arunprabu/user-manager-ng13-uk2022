@@ -66,8 +66,8 @@ Think in Angular
 
 Building Blocks 
 --
-  Components 
-  Directives
+  Components
+  Directives 
   Services
   Interfaces/Models/Classes 
   Guards
@@ -75,22 +75,30 @@ Building Blocks
   Modules
   Interceptor 
 
+
 ---
 Concepts
 --
-  * 
-  *
-  *
-  *
-  * 
+  * Data Binding 
+  * Routing 
+  * Any to Any Comp Communication
+  * Http Calls / RxJS/Observable 
+  * Subscription
+  
 
 ---
+
+ng generate component header (4)
 
 Project Structure
 ---
   src/
     app/
       header/
+      footer/
+      menu/
+      dashboard/
+      reports/
       ...
       ...
       ...
@@ -100,5 +108,105 @@ Project Structure
 
 
 
+---
 
 
+Types of Styles
+---
+  1. External Styles 
+      bootstrap, style.css, comp specific css 
+
+  2. Internal Styles 
+
+  3. Inline Styles 
+
+----
+ViewEncapsulation
+--
+
+
+Routing 
+---
+  --
+  Single Page App (SPA)
+  ---
+    Characteristics(7)
+    ---
+      1. Pages should not refresh / reload [DONE]
+      2. URL should change [DONE]
+      3. History should be maintained w/o page refresh/reload [DONE]
+      4. Retain header and footer w/o loading again and again [DONE] 
+      5. Page should show contextual updates in between header and footer [DONE]
+      6. Active menu should be set
+      7. Page Title should also be changed [TODO]
+
+  Step 0:
+  ---
+    Identify the URLs for the Menu Items 
+    Home            - localhost:4200/
+    Concepts        - localhost:4200/concepts
+    User Manager    - localhost:4200/users
+    About           - localhost:4200/about 
+
+  Step 1:
+  ---
+    Let's setup the Menus with proper URLs in menu.comp.html
+
+  Step 2: 
+  ---
+    Let's create the components for our URLs 
+    ng g c home -t -s 
+    ng g c concepts -s 
+    ng g c users -s
+    ng g c about -s
+
+    
+  Step 3:
+  --
+    Check the app. URLs not stable yet. 
+
+    Now it's time to config to routes / urls 
+
+    go to app-routing.module.ts 
+    // config the routes 
+    const routes: Routes = [
+      { path: '', component: HomeComponent },
+      { path: 'concepts', component: ConceptsComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'about', component: AboutComponent },
+    ];
+
+
+  Step 4: 
+  --
+    check the app. URLs should change. But, the specific component is not loaded in between header and footer
+
+    go to app.comp.html -- layout file 
+    have <router-outlet></router-outlet> in between header and footer 
+
+
+  Step 5:
+  ---
+    check the app. The comp is loaded in b/w header and footer. But the pages still refresh 
+
+    Let's fix it in menu.comp.html
+
+    replace href with routerLink 
+
+  Step 6:
+  --
+    Let's work on setting Active Menu in menu.comp.html 
+
+    add  routerLinkActive="active" in all anchor tags 
+
+  
+  Step 7:
+  --
+    Check the app. Home menu will always be active. Let's fix it 
+
+    the home menu anchor tag should have [routerLinkActiveOptions]="{exact: true}" 
+
+    Routing is over!
+
+---
+  
