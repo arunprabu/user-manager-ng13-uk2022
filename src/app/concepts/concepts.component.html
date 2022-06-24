@@ -1,5 +1,7 @@
 <div class="container-fluid mt-3">
 
+  <p>Data Received From Child Comp: {{dataReceivedFromChildComp}}</p>
+
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#basic-databinding" role="tab"
@@ -21,18 +23,46 @@
       <h3>Interpolation</h3>
       <p>App Name: {{appName}}</p>
       <p>Team Size: {{developersCount}}</p>
+      <!-- The following are not recommended -- instead use property binding -->
+      <p title="{{appName}}">Mouseover to see the App Name</p>
+      <input type="text" value="{{appName}}">
+      <hr>
 
+      <h3>Property Binding</h3>
+      <p [title]="companyName">Mouseover to see the Company Name</p>
+      <input type="text" [value]="companyName">
+      <!-- will learn [ngClass] later in form validation-->
+      <!-- TODO:  [ngStyle] -->
+      <hr>
+
+      <h3>Event Binding</h3>
+      <!-- $event is an event obj baked by angular -->
+      <!-- TODO: disable the button on click and change the label to 'Clicked'-->
+      <button (click)="handleClickMe($event)">Click Me</button>
+      <hr>
+
+      <h4>Two Way Binding</h4>
+      <p>Course Name: {{courseName}}</p> <!-- Interpolation -->
+      <input type="text" [value]="courseName"> <br> <!-- Property Binding -->
+      <input type="text" [(ngModel)]="courseName"> <!-- Two Way Binding -->
 
     </div>
 
     <div class="tab-pane fade" id="cpb-databinding" role="tabpanel"
       aria-labelledby="cpb-databinding-tab">
-      <h2>Parent to Child Comp Communication using Custom Property Binding </h2>
+      <h2>Parent to Child Comp Communication using Custom Property Binding</h2>
+      <!-- Step 3 of Custom Property Binding : -->
+      <app-employee></app-employee>
+      <app-employee [age]="25"></app-employee>
+      <app-employee [age]="35"></app-employee>
+      <app-employee [age]="myAge"></app-employee> <!-- Step 4: You can keep the data in concepts.comp.ts -->
     </div>
 
     <div class="tab-pane fade" id="ceb-databinding" role="tabpanel"
       aria-labelledby="ceb-databinding-tab">
       <h2>Child to Parent Comp Communication using Custom Event Binding</h2>
+      <!-- Step 5 of Custom Event Binding - Let's work on the handler -->
+      <app-ceb (profileLoaded)="handleProfileLoaded($event)"></app-ceb>
     </div>
 
     <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">

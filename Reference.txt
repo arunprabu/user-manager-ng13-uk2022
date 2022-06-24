@@ -90,15 +90,19 @@ Concepts
 
 ng generate component header (4)
 
-Project Structure
+Project Structure - Feature-wise project structure
 ---
   src/
     app/
-      header/
-      footer/
-      menu/
-      dashboard/
-      reports/
+      shared/
+        header/
+        footer/
+        menu/
+      concepts/
+        employee/
+      about/
+      home/
+      users/
       ...
       ...
       ...
@@ -137,8 +141,9 @@ Routing
       3. History should be maintained w/o page refresh/reload [DONE]
       4. Retain header and footer w/o loading again and again [DONE] 
       5. Page should show contextual updates in between header and footer [DONE]
-      6. Active menu should be set
+      6. Active menu should be set [DONE]
       7. Page Title should also be changed [TODO]
+          Prereq: Dependency Injection 
 
   Step 0:
   ---
@@ -209,4 +214,47 @@ Routing
     Routing is over!
 
 ---
-  
+
+Data Binding 
+---
+  TS <=> HTML 
+
+  1. Interpolation
+      TS => HTML 
+      {{}}
+
+  2. Property Binding
+      TS => HTML 
+      []
+
+  3. Event Binding 
+      TS <= HTML 
+      ()
+
+  4. Two Way Binding 
+      TS <=> HTML 
+      [(ngModel)]
+      Note: can be implemented on form elements such as input, textarea.. 
+
+  5. Custom Property Binding
+      Using @Input() and []
+
+  6. Custom Event Binding 
+
+
+
+Cross Component Communication
+---
+    1. Parent to Child Component Communication
+        using Custom Property Binding 
+
+    2. Child to Parent Component Communication
+        2.1 using Custom Event Binding - we can send the data to parent comp 
+        2.2 using @ViewChild() [TODO] - we can access child comp's data from parent comp 
+          Prereq: LifeCycle Hooks
+
+    3. Any to Any Component Communication
+        Prereq: Services, RxJS/Observables, Subscription, LifeCycle Hooks
+
+        
+
