@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Renderer2 } from '@angular/core';
 
 // Decorator
 @Directive({
@@ -8,6 +8,8 @@ export class ColorizerDirective {
 
   // Step 1: find out what element has used appColorizer directive 
   // Step 2: change the bg color
+
+  @HostBinding('style.border') border: string = '';
 
   constructor( private elementRef: ElementRef, private renderer: Renderer2) { 
     console.log('Inside Constructor');
@@ -47,6 +49,8 @@ export class ColorizerDirective {
   handleMouseover( targetEl: any): void {
     console.log(targetEl);
     this.renderer.setStyle(targetEl, 'background-color', 'yellow');
+
+    this.border = 'dashed 5px #000';
   }
 
   @HostListener('mouseout', ['$event.target'])
