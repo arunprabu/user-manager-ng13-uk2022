@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 // Decorator
 @Component({
-  selector: 'app-root', // exposed in an selector 'app-root'
+  selector: 'app-root', // exposed in an element selector 'app-root'
   templateUrl: './app.component.html', // html - template is mandatory -- should be only one
   styleUrls: ['./app.component.css'] // css -- optional -- can be multiple 
 })

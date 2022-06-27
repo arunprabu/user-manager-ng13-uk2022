@@ -24,6 +24,10 @@ export class ConceptsComponent implements OnInit {
   // custom event binding related
   dataReceivedFromChildComp = '';
 
+  // directives related
+  isLoggedIn = false;
+  skills = ['html', 'css', 'ts', 'js', 'angular'];
+
   constructor() {
   }
 

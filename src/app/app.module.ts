@@ -8,11 +8,12 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { HomeComponent } from './home/home.component';
-import { ConceptsComponent } from './concepts/concepts.component';
+import { ConceptsComponent } from './concepts/components/concepts.component';
 import { UsersComponent } from './users/users.component';
 import { AboutComponent } from './about/about.component';
-import { EmployeeComponent } from './concepts/employee/employee.component';
-import { CebComponent } from './concepts/ceb/ceb.component';
+import { EmployeeComponent } from './concepts/components/employee/employee.component';
+import { CebComponent } from './concepts/components/ceb/ceb.component';
+import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 
 // Main Switching Box
 @NgModule({
@@ -26,7 +27,8 @@ import { CebComponent } from './concepts/ceb/ceb.component';
     UsersComponent,
     AboutComponent,
     EmployeeComponent,
-    CebComponent
+    CebComponent,
+    ColorizerDirective
   ],
   imports: [
     BrowserModule,

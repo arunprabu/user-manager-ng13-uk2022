@@ -5,3 +5,5 @@ TODO: Conditional content projection / conditional transclusion / multi-slot con
       Display 'login' and 'signup' at last in header menu 
       Display 'Back to top' at first in footer menu 
 
+TODO: use @ViewChild() to access child comp's data 
+
