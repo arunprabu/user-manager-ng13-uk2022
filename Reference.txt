@@ -190,7 +190,6 @@ Routing
       { path: 'about', component: AboutComponent },
     ];
 
-
   Step 4: 
   --
     check the app. URLs should change. But, the specific component is not loaded in between header and footer
@@ -285,4 +284,31 @@ Directives
 
 
 ====
+
+Forms in Angular
+---
+  1. Template Driven Forms 
+      * made with html 
+      * easiest type of form 
+      * will use directives for validation and other other purposes 
+      * part of FormsModule
+
+      disadv
+      --
+        * not suitable for Complex form validations 
+        * not suitable for Unit Testing 
+
+  2. Reactive Forms [ Recommended]
+      * made with html + ts 
+      * easy 
+      * Reactive forms are defined programmatically at the level of the component class
+      * part of ReactiveFormsModule
+
+      adv 
+      --
+        * suitable for Complex form validations 
+        * suitable for Unit Testing 
+
+---
+
 

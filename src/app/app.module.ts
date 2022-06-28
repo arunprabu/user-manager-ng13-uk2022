@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { AddUserComponent } from './users/components/add-user/add-user.component';
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Main Switching Box
 @NgModule({
@@ -37,6 +38,8 @@ import { UserDetailsComponent } from './users/components/user-details/user-detai
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
