@@ -7,3 +7,7 @@ TODO: Conditional content projection / conditional transclusion / multi-slot con
 
 TODO: use @ViewChild() to access child comp's data 
 
+TODO: Work on Delete user 
+TODO: Upon getting successful confirmation show the msg for about 3 seconds and 
+then redirect to users url. 
+

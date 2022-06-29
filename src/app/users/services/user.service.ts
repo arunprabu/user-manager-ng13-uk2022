@@ -10,6 +10,7 @@ export class UserService {
 
   constructor( private http: HttpClient) { }
 
+  // CREATE
   createUser(userData: any){ // 1. get the form data from the comp ts 
     console.log(userData);
 
@@ -25,6 +26,7 @@ export class UserService {
       }));
   }
 
+  // READ 
   getUsers(){
     console.log('Inside getUsers');
 
@@ -34,4 +36,29 @@ export class UserService {
         return res;
       }));
   }
+
+  // READ -- fetch user details 
+  getUserById(userId: string | null){
+    console.log(userId);
+    const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/' + userId;
+
+    return this.http.get(userAPIUrl)
+      .pipe( map((res: any) => { 
+        console.log(res);
+        return res;
+      }));
+  }
+
+  // UPDATE 
+  updateUser(userData: any){
+    console.log(userData);
+    const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/' + userData.id;
+    return this.http.put(userAPIUrl, userData)
+      .pipe( map((res: any) => { 
+        console.log(res);
+        return res;
+      }));
+  }
+
+  // DELETE 
 }
