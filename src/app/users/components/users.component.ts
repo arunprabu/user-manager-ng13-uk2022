@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -9,9 +11,9 @@ import { UserService } from '../services/user.service';
 })
 export class UsersComponent implements OnInit {
 
-  userList!: any[]; 
+  userList!: User[]; 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private http: HttpClient) { }
 
   ngOnInit(): void {
     // life cycle hook.
@@ -20,7 +22,7 @@ export class UsersComponent implements OnInit {
     console.log('Inside ngOnInit');
 
     this.userService.getUsers()
-      .subscribe( (res: any) => {
+      .subscribe( (res: User[]) => {
         console.log(res);
         this.userList = res;
       });

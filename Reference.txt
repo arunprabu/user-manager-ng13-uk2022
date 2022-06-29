@@ -66,11 +66,11 @@ Think in Angular
 
 Building Blocks 
 --
-  Components 
-  Directives 
-  Services
-  Interfaces/Models/Classes 
-  Guards
+  Components [DONE]
+  Directives  [DONE]
+  Services [DONE]
+  Interfaces/Models/Classes [DONE]
+  Guards 
   Pipes
   Modules
   Interceptor 
@@ -78,12 +78,12 @@ Building Blocks
 ---
 Concepts
 --
-  * Data Binding 
-  * Routing 
-  * Any to Any Comp Communication
-  * Http Calls / RxJS/Observable 
-  * Subscription
-  * Unit Testing
+  * Data Binding [DONE]
+  * Routing [DONE]
+  * Any to Any Comp Communication 
+  * Http Calls / RxJS/Observable [DONE]
+  * Subscription  
+  * Unit Testing [Day 11]
 
 
 ---
@@ -312,3 +312,15 @@ Forms in Angular
 ---
 
 
+What's Observable?
+    It's a collection that returned over time. 
+    It's a push, that sends multiple values
+    Observable is like restaurant kitchen.
+    If you subscribe to observable, it decides when to give information 
+Now, What's RxJs?
+    Various method of operators, you can chain on Observables to filter data, sort, tile, convert 
+
+Refer: My Example on Observables and RxJS.
+http://jsbin.com/kuzifehivi/4/edit?html,js,console
+
+===

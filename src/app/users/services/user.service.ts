@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { User } from '../models/user';
+import { Observable } from 'rxjs';
 
 // Decorator
 @Injectable({
@@ -27,11 +29,12 @@ export class UserService {
   }
 
   // READ 
-  getUsers(){
+  getUsers(): Observable<User[]>{
     console.log('Inside getUsers');
 
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
-      .pipe( map((res: any) => { 
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
+      .pipe( map((res: User[]) => { 
+        // sort, filter, remove, convert
         console.log(res);
         return res;
       }));
