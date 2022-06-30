@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 
 // Decorator
 @Injectable({
@@ -53,14 +53,17 @@ export class UserService {
   }
 
   // UPDATE 
-  updateUser(userData: any){
+  updateUser(userData: any): Promise<any>{
     console.log(userData);
     const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/' + userData.id;
-    return this.http.put(userAPIUrl, userData)
-      .pipe( map((res: any) => { 
+    return firstValueFrom(this.http.put(userAPIUrl, userData))
+      .then( (res: any) => {
         console.log(res);
         return res;
-      }));
+      })
+      .catch( (err) => {
+        console.log(err);
+      })
   }
 
   // DELETE 

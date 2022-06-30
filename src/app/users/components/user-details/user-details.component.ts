@@ -36,19 +36,15 @@ export class UserDetailsComponent implements OnInit {
     this.dupUserData = { ...this.userData }; // shallow copy
   }
 
-  handleUpdate(form: NgForm){
+  async handleUpdate(form: NgForm){
     console.log(form); // you can use this for further validation
     // submittable form data
     console.log(this.dupUserData);
 
-    this.userService.updateUser(this.dupUserData)    
-      .subscribe( (res: any) => {
-        console.log(res);
-        if(res && res.id){
-          this.isUpdated = true;
-          this.userData = res;
-        }
-      })
-    
+    this.userData = await this.userService.updateUser(this.dupUserData)  
+
+    if(this.userData){
+      this.isUpdated = true;
+    }
   }
 }

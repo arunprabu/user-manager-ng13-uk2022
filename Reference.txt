@@ -73,7 +73,7 @@ Building Blocks
   Guards 
   Pipes
   Modules
-  Interceptor 
+  Interceptor [NA]
   
 ---
 Concepts

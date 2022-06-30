@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private userService: UserService, private http: HttpClient) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     // life cycle hook.
     // whenever the comp is coming into view this will be called 
     // ideal place for you to hit the rest api
