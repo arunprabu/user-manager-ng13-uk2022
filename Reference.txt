@@ -70,9 +70,9 @@ Building Blocks
   Directives  [DONE]
   Services [DONE]
   Interfaces/Models/Classes [DONE]
-  Guards 
-  Pipes
-  Modules
+  Guards [DONE]
+  Pipes [DONE]
+  Modules [DONE]
   Interceptor [NA]
   
 ---
@@ -95,9 +95,10 @@ Project Structure - Feature-wise and Building-Block wise project structure
   src/
     app/
       shared/
-        header/
-        footer/
-        menu/
+        components/
+          header/
+          footer/
+          menu/
       concepts/
         components/
           employee/
@@ -111,6 +112,9 @@ Project Structure - Feature-wise and Building-Block wise project structure
       home/
       users/
         components/
+          add-user/
+          user-details/
+          users...
         services/
       ...
       ...
@@ -324,3 +328,18 @@ Refer: My Example on Observables and RxJS.
 http://jsbin.com/kuzifehivi/4/edit?html,js,console
 
 ===
+
+Feature Module and Feature Routing Module 
+--
+  Step 1: 
+  --- 
+    Create Feature Module 
+      ng g m users/users --flat -m=app 
+
+  Step 2:
+  --
+    Create Feature Routing Module 
+      ng g m users/users-routing --flat -m=users
+
+
+---
