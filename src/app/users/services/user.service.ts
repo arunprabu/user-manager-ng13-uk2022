@@ -53,11 +53,11 @@ export class UserService {
   }
 
   // UPDATE 
-  updateUser(userData: any): Promise<any>{
+  updateUser(userData: any): Promise<User | void>{
     console.log(userData);
     const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/' + userData.id;
-    return firstValueFrom(this.http.put(userAPIUrl, userData))
-      .then( (res: any) => {
+    return firstValueFrom(this.http.put<User>(userAPIUrl, userData))
+      .then( (res: User) => {
         console.log(res);
         return res;
       })
