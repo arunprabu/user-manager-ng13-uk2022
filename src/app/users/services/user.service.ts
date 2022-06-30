@@ -55,6 +55,8 @@ export class UserService {
   // UPDATE 
   updateUser(userData: any): Promise<User | void>{
     console.log(userData);
+    // toPromise() is deprecated in rxjs v7. it is usable now. but, it will be removed in rxjs 8.
+    // However let's go with the replacement for toPromise -- they are firstValueFrom and lastValueFrom
     const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/' + userData.id;
     return firstValueFrom(this.http.put<User>(userAPIUrl, userData))
       .then( (res: User) => {
