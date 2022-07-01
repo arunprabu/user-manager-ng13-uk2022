@@ -38,10 +38,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('User Manager App! is running!');
   });
 
-  it('adds two numbers properly', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance; // taking up comp ts (class) for testing
-    expect(app.add(10, 20)).toEqual(30);
-    expect(app.add(2, 3)).toEqual(5);
-  });
 });

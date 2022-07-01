@@ -10,7 +10,5 @@ export class AppComponent {
   // ts 
   title = 'User Manager App!';
 
-  add(a: number, b: number){
-    return a + b;
-  }
+ 
 }
