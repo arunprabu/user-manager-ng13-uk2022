@@ -10,8 +10,8 @@ import { AuthGuard } from './shared/guards/auth.guard';
 // config the routes 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'concepts', component: ConceptsComponent },
-  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
+  { path: 'concepts', component: ConceptsComponent, canActivate: [AuthGuard] },
+  { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

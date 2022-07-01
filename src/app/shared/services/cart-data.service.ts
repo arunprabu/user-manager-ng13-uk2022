@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,28 @@ export class CartDataService {
     }
   ]
 
-  // Step2: We need to create an observable. so that any comp can subscribe to it. 
-  // Step3: make the cart items subscribable 
+  // Step 2: Let's work on to create an Observable. so that any comp can subscribe to it. 
+  // In order to do it, create an obj of BehaviorSubject with the currentCartItems as default data
+  private cartItemsList = new BehaviorSubject(this.currentCartItems);
 
-  // Step4: make the cart items updateable 
+  // Step3: Let's create an observable for the above BehaviorSubject object. 
+  latestCartItems: Observable<any[]> = this.cartItemsList.asObservable();
 
+  constructor() { 
+    
+  }
 
-  constructor() { }
+  // update the cart items 
+  updateCart(pdt: any){
+    console.log(pdt);
+
+    // let's work on updating the cart items array over observable 
+    this.latestCartItems.pipe( take(1) ).subscribe( (defaultCartItems: any) => {
+      console.log(defaultCartItems);
+      
+      const newCartItems = [...defaultCartItems, pdt];
+      console.log(newCartItems);
+      this.cartItemsList.next(newCartItems); // emitting updated array over observable
+    });
+  }
 }

@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // ts 
-  title = 'user-manager-ng13-uk2022';
+  title = 'User Manager App!';
+
+  add(a: number, b: number){
+    return a + b;
+  }
 }

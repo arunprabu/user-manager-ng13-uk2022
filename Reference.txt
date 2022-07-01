@@ -80,9 +80,9 @@ Concepts
 --
   * Data Binding [DONE]
   * Routing [DONE]
-  * Any to Any Comp Communication 
+  * Any to Any Comp Communication [DONE]
   * Http Calls / RxJS/Observable [DONE]
-  * Subscription  
+  * Subscription  [DONE]
   * Unit Testing [Day 11]
 
 
@@ -343,3 +343,8 @@ Feature Module and Feature Routing Module
 
 
 ---
+
+Unit Testing in Angular
+---
+  Tools: JasmineJS (Test Framework), Karma (Test Runner)
+

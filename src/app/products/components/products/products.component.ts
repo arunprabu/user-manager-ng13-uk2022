@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartDataService } from 'src/app/shared/services/cart-data.service';
 
 @Component({
   selector: 'app-products',
@@ -35,13 +36,16 @@ export class ProductsComponent implements OnInit {
     price: '$6.13'
   }];
 
-  constructor() { }
+  constructor( private cartDataService: CartDataService) { }
 
   ngOnInit(): void {
   }
 
   handleAddToCart(pdt: any){
     console.log(pdt);
+
+    this.cartDataService.updateCart(pdt);
+
   }
 
 }
