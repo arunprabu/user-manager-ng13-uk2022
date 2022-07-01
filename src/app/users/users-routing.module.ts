@@ -7,9 +7,9 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 
 // setting up child routes/nested routes 
 const usersRoutes: Routes = [
-  { path: 'users', component: UsersComponent },
-  { path: 'users/add', component: AddUserComponent },
-  { path: 'users/:userId', component: UserDetailsComponent } // userId is url param
+  { path: '', component: UsersComponent },
+  { path: 'add', component: AddUserComponent },
+  { path: ':userId', component: UserDetailsComponent } // userId is url param
 ];
 
 @NgModule({

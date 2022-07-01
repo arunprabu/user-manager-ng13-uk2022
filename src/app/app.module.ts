@@ -41,7 +41,6 @@ import { ProductsModule } from './products/products.module';
     BrowserModule,
     FormsModule, // ngModel in concepts.comp
     HttpClientModule,
-    UsersModule,
     ProductsModule,
     AppRoutingModule
   ],

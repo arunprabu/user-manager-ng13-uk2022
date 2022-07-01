@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'concepts', component: ConceptsComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutComponent },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+  },
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

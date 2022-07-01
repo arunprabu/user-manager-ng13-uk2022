@@ -347,4 +347,18 @@ Feature Module and Feature Routing Module
 Unit Testing in Angular
 ---
   Tools: JasmineJS (Test Framework), Karma (Test Runner)
+  ng test --code-coverage 
+
+
+Build Checklist
+---
+  1. remove all console.logs 
+  2. check for errors in console 
+  3. linting (using ng lint -- Refer: setting up eslint in angular  )
+
+Let's take a build 
+--
+  ng build 
+---
+
 
